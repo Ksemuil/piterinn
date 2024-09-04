@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Guide</title>
-    <link rel="stylesheet" href="css/bulma.min.css">
+    <link rel="stylesheet" href="css/bulma.css">
+    <script src="https://kit.fontawesome.com/afe61cbcdf.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -15,7 +16,7 @@
 </section>
 
 <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
-    <div class="navbar-menu">
+    <div class="navbar-brand">
             <a class="navbar-item" href="index.html">
                 <figure class="image">
                     <img src="public/img/logo.png" alt="Наше лого! Вау!"/>
@@ -33,149 +34,167 @@
     </div>
 </nav>
 
-<article class="message">
-    <div class="message-body">
-        <i>Отель был открыт <b>18.11.2013 г.</b> как <b>“Park Inn by Radisson”</b></i>.
-    </div>
-</article>
+<section class="section">
+    <article class="message">
+        <div class="message-body">
+            <i>Отель был открыт <b>18.11.2013 г.</b> как <b>“Park Inn by Radisson”</b></i>.
+        </div>
+    </article>
+</section>
 
-<div class="fixed-grid has-4-cols">
-    <div class="grid">
-        <div class="cell is-col-span-2">
-            <h2 class="title">Общая информация о гостинице</h2>
-            <p><b><i>Всего</i></b> в отеле 179 номеров и 1 игровая комната.</p>
-            <p>Комплектация номеров предполагает <b><i>одно/двухместное размещение</i></b> с возможностью установки <b><i>доп. места</i></b>. <br>В категории <b><i>JKN</i></b> возможно установить <b><i>2 доп. места</i></b>. В категории 1KN раскладывающийся диван на 2-х гостей + возможно установить доп. место.</p>
-            <table class="table is-bordered">
-                <caption>Краткая информация (более подробно см. в Номерной фонд):</caption>
-                <thead>
-                 <tr>
-                    <th>Категория</th>
-                    <th>Кол-во №</th>
-                    <th><abbr title="Площадь">S</abbr></th>
-                    <th>Макс кол-во взрослых</th>
-                    <th>Комплектация</th>
-                 </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <th>SKN</th>
-                    <td>35</td>
-                    <td>20-24</td>
-                    <td>3</td>
-                    <td>Вафельные халаты, бут. вода</td>
-                </tr>
-                <tr>
-                    <th>STN</th>
-                    <td>35</td>
-                    <td>20-24</td>
-                    <td>3</td>
-                    <td>Вафельные халаты, бут. вода</td>
-                </tr>
-                <tr>
-                    <th>UKN</th>
-                    <td>24</td>
-                    <td>24-30</td>
-                    <td>3</td>
-                    <td>Махровые халаты + гладильный/чайный набор</td>
-                </tr>
-                <tr>
-                    <th>UTN</th>
-                    <td>24</td>
-                    <td>24-30</td>
-                    <td>3</td>
-                    <td>Махровые халаты + гладильный/чайный набор</td>
-                </tr>
-                <tr>
-                    <th>JKN</th>
-                    <td>10</td>
-                    <td>35-49</td>
-                    <td>4</td>
-                    <td>+кофейный набор</td>
-                </tr>
-                <tr>
-                    <th>JTN</th>
-                    <td>10</td>
-                    <td>35-49</td>
-                    <td>4</td>
-                    <td>+кофейный набор</td>
-                </tr>
-                <tr>
-                    <th>1KN</th>
-                    <td>4</td>
-                    <td>50-77</td>
-                    <td>5</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th>XNC</th>
-                    <td>3</td>
-                    <td>30</td>
-                    <td>3</td>
-                    <td></td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="cell is-col-start-4">
-            <h2 class="title">Контакты:</h2>
-            <p><b>Адрес</b>: г. Петрозаводск, пл. Гагарина, д. 1</p>
-            <p><b>Сайт отеля</b>: <a href="https://piterinn.com">https://piterinn.com</a></p>
-            <p><b>Телефоны</b>:<br>
-                   <a href="tel:8 (800) 222-50-71">8 (800) 222-50-71</a>
-                <br>
-                <a href="tel:8 (8142) 71-70-71">8 (8142) 71-70-71</a>
-            </p>
-            <p><b>Почта отдела бронирования</b>: <a href="mailto:reserv@piter-inn.ru">reserv@piter-inn.ru</a></p>
-            <p><b>Почта Front Office</b>: <a href="mailto:fo@piterinn.ru">fo@piterinn.ru</a></p>
-            <p><b>Почта отдела продаж</b>: <a href="mailto:sales@piterinn.ru">sales@piterinn.ru</a></p>
+<section class="section">
+    <div class="fixed-grid has-4-cols">
+        <div class="grid">
+            <div class="cell is-col-span-2">
+                <h2 class="title">Общая информация о гостинице</h2>
+                <p><b><i>Всего</i></b> в отеле <i>179 номеров и 1 игровая комната.</i></p>
+                <p>Комплектация номеров предполагает <b><i>одно/двухместное размещение</i></b> с возможностью установки <b><i>доп. места</i></b>. <br>В категории <b><i>JKN</i></b> возможно установить <b><i>2 доп. места</i></b>. В категории 1KN раскладывающийся диван на 2-х гостей + возможно установить доп. место.</p>
+                <table class="table is-bordered">
+                    <caption><b>Краткая информация <i>(более подробно см. в Номерной фонд):</i></b></caption>
+                    <thead>
+                    <tr>
+                        <th>Категория</th>
+                        <th>Кол-во №</th>
+                        <th><abbr title="Площадь">S</abbr></th>
+                        <th>Макс кол-во взрослых</th>
+                        <th>Комплектация</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th>SKN</th>
+                        <td>35</td>
+                        <td>20-24</td>
+                        <td>3</td>
+                        <td>Вафельные халаты, бут. вода</td>
+                    </tr>
+                    <tr>
+                        <th>STN</th>
+                        <td>35</td>
+                        <td>20-24</td>
+                        <td>3</td>
+                        <td>Вафельные халаты, бут. вода</td>
+                    </tr>
+                    <tr>
+                        <th>UKN</th>
+                        <td>24</td>
+                        <td>24-30</td>
+                        <td>3</td>
+                        <td>Махровые халаты + гладильный/чайный набор</td>
+                    </tr>
+                    <tr>
+                        <th>UTN</th>
+                        <td>24</td>
+                        <td>24-30</td>
+                        <td>3</td>
+                        <td>Махровые халаты + гладильный/чайный набор</td>
+                    </tr>
+                    <tr>
+                        <th>JKN</th>
+                        <td>10</td>
+                        <td>35-49</td>
+                        <td>4</td>
+                        <td>+кофейный набор</td>
+                    </tr>
+                    <tr>
+                        <th>JTN</th>
+                        <td>10</td>
+                        <td>35-49</td>
+                        <td>4</td>
+                        <td>+кофейный набор</td>
+                    </tr>
+                    <tr>
+                        <th>1KN</th>
+                        <td>4</td>
+                        <td>50-77</td>
+                        <td>5</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>XNC</th>
+                        <td>3</td>
+                        <td>30</td>
+                        <td>3</td>
+                        <td></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="cell is-col-start-4">
+                <h2 class="title">Контакты:</h2>
+                <p><b>Адрес</b>: г. Петрозаводск, пл. Гагарина, д. 1</p>
+                <p><b>Сайт отеля</b>: <a href="https://piterinn.com">https://piterinn.com</a></p>
+                <p><b>Телефоны</b>:<br>
+                    <span class="icon-text">
+                        <span class="icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </span>
+                        <span><a href="tel:8 (800) 222-50-71">8 (800) 222-50-71</a></span>
+                    </span>
+                    <br>
+                    <span class="icon-text">
+                        <span class="icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </span>
+                        <span><a href="tel:8 (8142) 71-70-71">8 (8142) 71-70-71</a></span>
+                    </span>
+                </p>
+                <p><b>Почта отдела бронирования</b>: <a href="mailto:reserv@piter-inn.ru">reserv@piter-inn.ru</a></p>
+                <p><b>Почта Front Office</b>: <a href="mailto:fo@piterinn.ru">fo@piterinn.ru</a></p>
+                <p><b>Почта отдела продаж</b>: <a href="mailto:sales@piterinn.ru">sales@piterinn.ru</a></p>
+            </div>
         </div>
     </div>
-</div>
+</section>
 
 <hr class="page-divider">
 
-<div class="fixed-grid has-3-cols">
-    <div class="grid">
-        <div class="cell">
-            <h2 class="title has-text-centered">ТРЕНАЖЕРНЫЙ ЗАЛ</h2>
-            <p>В отеле имеется тренажерный зал, работает с 07:00 до 22:00. Дверь в зал открывается ключом от номера. Располагается на втором этаже, слева от лифтов. Тренажерный зал оснащен кардиозоной с эллиптическим тренажером и беговыми дорожками, зоной свободных весов, профессиональными тренажерами для нагрузок на различные группы мышц</p>
+<section class="section">
+    <div class="fixed-grid has-3-cols">
+        <div class="grid">
+            <div class="cell">
+                <h2 class="title has-text-centered">ТРЕНАЖЕРНЫЙ ЗАЛ</h2>
+                <p>В отеле имеется тренажерный зал, работает с 07:00 до 22:00. Дверь в зал открывается ключом от номера. Располагается на втором этаже, слева от лифтов. Тренажерный зал оснащен кардиозоной с эллиптическим тренажером и беговыми дорожками, зоной свободных весов, профессиональными тренажерами для нагрузок на различные группы мышц</p>
+            </div>
+            <div class="cell">
+                <h2 class="title has-text-centered">САУНА</h2>
+                <p>Рядом с залом располагается сауна. Оснащена парной, купелью и зоной отдыха. Стоимость посещения составляет 1500р./ч до 2 чел., 2000/ч до 4 чел., 3000р./ч до 6 чел. 4000р./ч до 8 чел. Работает с 09:00 до 23:00. Бронировать необходимо как минимум за час, чтобы сауна прогрелась.</p>
+            </div>
+            <div class="cell">
+                <h2 class="title has-text-centered">ИГРОВАЯ КОМНАТА</h2>
+                <p>Детская игровая комната располагается на втором этаже в №236 и работает с 09:00 до 20:00. Ребенок может находиться в комнате только с сопровождением взрослых.</p>
+            </div>
         </div>
-        <div class="cell">
-            <h2 class="title has-text-centered">САУНА</h2>
-            <p>Рядом с залом располагается сауна. Оснащена парной, купелью и зоной отдыха. Стоимость посещения составляет 1500р./ч до 2 чел., 2000/ч до 4 чел., 3000р./ч до 6 чел. 4000р./ч до 8 чел. Работает с 09:00 до 23:00. Бронировать необходимо как минимум за час, чтобы сауна прогрелась.</p>
     </div>
-        <div class="cell">
-            <h2 class="title has-text-centered">ИГРОВАЯ КОМНАТА</h2>
-            <p>Детская игровая комната располагается на втором этаже в №236 и работает с 09:00 до 20:00. Ребенок может находиться в комнате только с сопровождением взрослых.</p>
-        </div>
-    </div>
-</div>
+</section>
 
 <hr class="page-divider">
 
-<div class="fixed-grid has-3-cols">
-    <div class="grid">
-        <div class="cell">
-            <h2 class="title has-text-centered">ЗАВТРАК</h2>
-            <p>Завтрак в отеле проходит в формате “шведский стол” ежедневно с 07:00 до 11:00. Завтрак может входить или не входить в стоимость номера в зависимости от выбранного тарифа.</p>
-            <p>Стоимость завтрака для гостей отеля — 650 руб.</p>
-            <p>Стоимость завтрака без проживания — 700 руб.</p>
-        </div>
-        <div class="cell">
-            <h2 class="title has-text-centered">ЧТО НА ЗАВТРАК</h2>
-            <p>«Шведский стол» включает горячие блюда (каши, оладьи с различными топингами, сосиски, яйца, творожную запеканку и пр.), мясную, сырную и овощную нарезки, мягкие сыры, сухие завтраки, фрукты и фруктовый салат, домашний хлеб и свежую выпечку, воду, соки и горячие напитки.</p>
-        </div>
-        <div class="cell">
-            <h2 class="title has-text-centered">ПРАЧЕЧНАЯ И ХИМЧИСТКА</h2>
-            <p>Также гости могут воспользоваться услугами прачечной и химчистки. Бланки заявки находятся в номере. Заказы для прачечной, принятые до 09:00, будут готовы в этот же день.</p>
-            <p>Химчистка возможна только с пн. по пт. Заказы принятые до 09:00, будут готовы на след. день.</p>
+<section class="section">
+    <div class="fixed-grid has-3-cols">
+        <div class="grid">
+            <div class="cell">
+                <h2 class="title has-text-centered">ЗАВТРАК</h2>
+                <p>Завтрак в отеле проходит в формате “шведский стол” ежедневно с 07:00 до 11:00. Завтрак может входить или не входить в стоимость номера в зависимости от выбранного тарифа.</p>
+                <p>Стоимость завтрака для гостей отеля — 650 руб.</p>
+                <p>Стоимость завтрака без проживания — 700 руб.</p>
+            </div>
+            <div class="cell">
+                <h2 class="title has-text-centered">ЧТО НА ЗАВТРАК</h2>
+                <p>«Шведский стол» включает горячие блюда (каши, оладьи с различными топингами, сосиски, яйца, творожную запеканку и пр.), мясную, сырную и овощную нарезки, мягкие сыры, сухие завтраки, фрукты и фруктовый салат, домашний хлеб и свежую выпечку, воду, соки и горячие напитки.</p>
+            </div>
+            <div class="cell">
+                <h2 class="title has-text-centered">ПРАЧЕЧНАЯ И ХИМЧИСТКА</h2>
+                <p>Также гости могут воспользоваться услугами прачечной и химчистки. Бланки заявки находятся в номере. Заказы для прачечной, принятые до 09:00, будут готовы в этот же день.</p>
+                <p>Химчистка возможна только с пн. по пт. Заказы принятые до 09:00, будут готовы на след. день.</p>
+            </div>
         </div>
     </div>
-</div>
+</section>
 
 <hr class="page-divider">
 
-<div class="fixed-grid has-4-cols">
+<section class="section">
     <div class="grid">
         <div class="cell is-col-span-2 has-text-centered">
             <h2 class="title">ЗАЕЗД</h2>
@@ -183,13 +202,13 @@
             <p>Ранний заезд составляет 50% от стоимости первых суток проживания.</p>
         </div>
         <div class="cell is-col-span-2 has-text-centered">
-            <h2 class="title ">ВЫЕЗД</h2>
+            <h2 class="title">ВЫЕЗД</h2>
             <p>Стандартное время выезда: 12:00</p>
             <p>Поздний выезд до 18:00 составляет 50% от стоимости последних суток проживания.</p>
             <p>Поздний выезд после 18:00 составляет 100% от стоимости последних суток проживания</p>
         </div>
     </div>
-</div>
+</section>
 
 <footer class="footer">
     <div class="content has-text-centered">
