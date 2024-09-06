@@ -1,21 +1,21 @@
 const navbarHTML = `
     <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-        <a class="navbar-item" href="../index.html"">
+        <a class="navbar-item" href="/index.html"">
             <figure class="image">
-                <img src="../public/img/logo.png" alt="Наше лого! Вау!"/>
+                <img src="/public/img/logo.png" alt="Наше лого! Вау!"/>
             </figure>
         </a>
-        <a class="navbar-item is-tab" href="../src/admin.html">
+        <a class="navbar-item is-tab" href="/src/admin.html">
             Администратор
         </a>
-        <a class="navbar-item is-tab" href="../src/docs.html">
+        <a class="navbar-item is-tab" href="/src/docs.html">
             Документы
         </a>
-        <a class="navbar-item is-tab" href="../src/FAQ.html">
+        <a class="navbar-item is-tab" href="/src/FAQ.html">
             FAQ
         </a>
-        <a class="navbar-item is-tab" href="../src/Memes.html">
+        <a class="navbar-item is-tab" href="/src/Memes.html">
             Memes!
         </a>
     </div>
