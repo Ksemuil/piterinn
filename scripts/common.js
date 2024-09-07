@@ -65,21 +65,27 @@ document.addEventListener('DOMContentLoaded', () => {
     // Получаем все элементы навигации
     const navItems = document.querySelectorAll('.navbar-item');
 
-    // Получаем текущий URL
-    const currentPage = window.location.pathname;
+    // Получаем текущий URL без параметров и якорей
+    let currentPage = window.location.pathname;
+
+    // Если URL заканчивается на '/', считаем это главной страницей
+    if (currentPage === '/') {
+        currentPage = '/index.html';
+    }
 
     // Проходим по каждому элементу навигации
     navItems.forEach(item => {
-        // Исключаем логотип по условию, если он ссылается на главную страницу
-        if (!item.href.includes('/index.html') && !item.href.endsWith('/')) {
-            // Проверяем href каждого элемента с текущим URL
-            if (item.href.includes(currentPage) || (currentPage === '/' && item.href.includes('index.html'))) {
-                // Добавляем класс 'is-active', если URL совпадает
-                item.classList.add('is-active');
-            }
+        // Получаем href без параметров и якорей
+        const navLink = new URL(item.href).pathname;
+
+        // Сравниваем href с текущим URL
+        if (navLink === currentPage) {
+            item.classList.add('is-active');
         }
     });
 });
+
+
 
 //Футер
 const footerHTML = `
