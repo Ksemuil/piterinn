@@ -88,6 +88,31 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+//Откл. подсветку лого
+document.addEventListener('DOMContentLoaded', () => {
+    // Получаем все элементы навигации
+    const navItems = document.querySelectorAll('.navbar-item');
+
+    // Получаем текущий URL
+    let currentPage = window.location.href;
+
+    // Проходим по каждому элементу навигации
+    navItems.forEach(item => {
+        const navLink = item.href;
+
+        // Если элемент не является логотипом (исключаем элементы с классом 'navbar-item' у логотипа)
+        if (!item.classList.contains('image')) {
+            // Если текущий URL содержит ссылку элемента навигации
+            if (currentPage.includes(navLink)) {
+                item.classList.add('is-active');
+            } else {
+                item.classList.remove('is-active');
+            }
+        }
+    });
+});
+
+
 //Футер
 const footerHTML = `
 <footer class="footer">
