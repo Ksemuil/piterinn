@@ -72,14 +72,16 @@ document.addEventListener('DOMContentLoaded', () => {
     navItems.forEach(item => {
         const navLink = item.href;
 
-        // Если элемент не является логотипом (исключаем элементы с классом 'navbar-item' у логотипа)
-        if (!item.classList.contains('logo')) {
-            // Если текущий URL содержит ссылку элемента навигации
-            if (currentPage.includes(navLink)) {
-                item.classList.add('is-active');
-            } else {
-                item.classList.remove('is-active');
-            }
+        // Явно исключаем логотип из подсветки
+        if (navLink.includes('index.html')) {
+            return; // Пропускаем проверку для логотипа
+        }
+
+        // Если текущий URL содержит ссылку элемента навигации
+        if (currentPage.includes(navLink)) {
+            item.classList.add('is-active');
+        } else {
+            item.classList.remove('is-active');
         }
     });
 });
