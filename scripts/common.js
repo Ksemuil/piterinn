@@ -68,6 +68,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Получаем текущий URL без параметров и якорей
     let currentPage = window.location.pathname;
 
+    // Отладка: выводим текущий путь в консоль
+    console.log('Current page:', currentPage);
+
     // Если URL заканчивается на '/', считаем это главной страницей
     if (currentPage === '/' || currentPage === '/piterinn/') {
         currentPage = '/piterinn/index.html';
@@ -78,14 +81,19 @@ document.addEventListener('DOMContentLoaded', () => {
         // Получаем href элемента без параметров и якорей
         const navLink = new URL(item.href).pathname;
 
+        // Отладка: выводим href каждого элемента в консоль
+        console.log('Checking nav item:', navLink);
+
         // Сравниваем href с текущим URL и подсвечиваем только один элемент
         if (navLink === currentPage) {
             item.classList.add('is-active');
+            console.log('Active link:', navLink);  // Отладка: выводим активную ссылку
         } else {
             item.classList.remove('is-active');
         }
     });
 });
+
 
 
 
