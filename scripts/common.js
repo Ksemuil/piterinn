@@ -69,21 +69,24 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentPage = window.location.pathname;
 
     // Если URL заканчивается на '/', считаем это главной страницей
-    if (currentPage === '/') {
-        currentPage = '/index.html';
+    if (currentPage === '/' || currentPage === '/piterinn/') {
+        currentPage = '/piterinn/index.html';
     }
 
     // Проходим по каждому элементу навигации
     navItems.forEach(item => {
-        // Получаем href без параметров и якорей
+        // Получаем href элемента без параметров и якорей
         const navLink = new URL(item.href).pathname;
 
-        // Сравниваем href с текущим URL
+        // Сравниваем href с текущим URL и подсвечиваем только один элемент
         if (navLink === currentPage) {
             item.classList.add('is-active');
+        } else {
+            item.classList.remove('is-active');
         }
     });
 });
+
 
 
 
