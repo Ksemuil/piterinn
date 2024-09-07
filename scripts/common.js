@@ -65,27 +65,21 @@ document.addEventListener('DOMContentLoaded', () => {
     // Получаем все элементы навигации
     const navItems = document.querySelectorAll('.navbar-item');
 
-    // Получаем текущий URL без параметров и якорей
-    let currentPage = window.location.pathname;
+    // Получаем текущий URL
+    let currentPage = window.location.href;
 
-    // Отладка: выводим текущий путь в консоль
-    console.log('Current page:', currentPage);
-
-    // Если URL заканчивается на '/', считаем это главной страницей
-    if (currentPage === '/' || currentPage === '/piterinn/') {
-        currentPage = '/piterinn/index.html';
-    }
+    // Отладка: выводим текущий полный URL в консоль
+    console.log('Current URL:', currentPage);
 
     // Проходим по каждому элементу навигации
     navItems.forEach(item => {
-        // Получаем href элемента без параметров и якорей
-        const navLink = new URL(item.href).pathname;
+        const navLink = item.href;
 
-        // Отладка: выводим href каждого элемента в консоль
+        // Отладка: выводим href каждого элемента навигации в консоль
         console.log('Checking nav item:', navLink);
 
-        // Сравниваем href с текущим URL и подсвечиваем только один элемент
-        if (navLink === currentPage) {
+        // Если текущий URL содержит ссылку элемента навигации
+        if (currentPage.includes(navLink)) {
             item.classList.add('is-active');
             console.log('Active link:', navLink);  // Отладка: выводим активную ссылку
         } else {
@@ -93,10 +87,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
-
-
-
-
 
 //Футер
 const footerHTML = `
