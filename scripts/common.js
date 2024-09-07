@@ -71,9 +71,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Проходим по каждому элементу навигации
     navItems.forEach(item => {
         // Исключаем логотип по условию, если он ссылается на главную страницу
-        if (!item.href.includes('/index.html')) {
+        if (!item.href.includes('/index.html') && !item.href.endsWith('/')) {
             // Проверяем href каждого элемента с текущим URL
-            if (item.href.includes(currentPage)) {
+            if (item.href.includes(currentPage) || (currentPage === '/' && item.href.includes('index.html'))) {
                 // Добавляем класс 'is-active', если URL совпадает
                 item.classList.add('is-active');
             }
