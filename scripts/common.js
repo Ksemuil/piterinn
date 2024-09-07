@@ -68,34 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Получаем текущий URL
     let currentPage = window.location.href;
 
-    // Отладка: выводим текущий полный URL в консоль
-    console.log('Current URL:', currentPage);
-
-    // Проходим по каждому элементу навигации
-    navItems.forEach(item => {
-        const navLink = item.href;
-
-        // Отладка: выводим href каждого элемента навигации в консоль
-        console.log('Checking nav item:', navLink);
-
-        // Если текущий URL содержит ссылку элемента навигации
-        if (currentPage.includes(navLink)) {
-            item.classList.add('is-active');
-            console.log('Active link:', navLink);  // Отладка: выводим активную ссылку
-        } else {
-            item.classList.remove('is-active');
-        }
-    });
-});
-
-//Откл. подсветку лого
-document.addEventListener('DOMContentLoaded', () => {
-    // Получаем все элементы навигации
-    const navItems = document.querySelectorAll('.navbar-item');
-
-    // Получаем текущий URL
-    let currentPage = window.location.href;
-
     // Проходим по каждому элементу навигации
     navItems.forEach(item => {
         const navLink = item.href;
@@ -111,7 +83,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
-
 
 //Футер
 const footerHTML = `
