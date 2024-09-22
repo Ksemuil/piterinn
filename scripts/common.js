@@ -86,6 +86,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// Добавляем favicon через JS
+const link = document.createElement('link');
+link.rel = 'icon';
+link.type = 'image/x-icon';
+link.href = '/piterinn/public/img/favicon.png';  // Укажите правильный путь к вашему favicon
+document.head.appendChild(link);
+
 //Футер
 const footerHTML = `
 <footer class="footer">
