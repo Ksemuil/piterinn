@@ -93,7 +93,7 @@ const footerHTML = `
         <strong>Сели@регистрируй</strong>
         <br>
         <br>
-        <strong>Shitcoded by FOOI</strong>
+        <strong>Shitcoded by FOOI & FOLI</strong>
     </div>
 </footer>`;
 
