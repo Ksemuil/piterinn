@@ -93,6 +93,18 @@ link.type = 'image/x-icon';
 link.href = '/piterinn/public/img/favicon.png';  // Укажите правильный путь к вашему favicon
 document.head.appendChild(link);
 
+// Находим все кнопки спойлеров и добавляем каждому обработчик события
+document.querySelectorAll('.spoiler-toggle').forEach(function(button) {
+    button.addEventListener('click', function() {
+        var content = this.nextElementSibling;
+        if (content.style.display === 'none') {
+            content.style.display = 'block';
+        } else {
+            content.style.display = 'none';
+        }
+    });
+});
+
 //Футер
 const footerHTML = `
 <footer class="footer">
