@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<!--suppress HtmlDeprecatedAttribute -->
+<html class="has-navbar-fixed-top" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Оплата</title>
+    <link rel="stylesheet" href="../../css/bulma.css">
+    <script src="https://kit.fontawesome.com/afe61cbcdf.js" crossorigin="anonymous"></script>
+    <script defer src="../../scripts/common.js"></script>
+</head>
+<body>
+
+<section class="section">
+    <h1 class="title">Методы оплаты, чеки, Billing, ручной платёж</h1>
+</section>
+
+<div id="nav"></div>
+
+<section class="section">
+    <div class="container">
+        <div class="content">
+            <p>Если оплата по DB, то все ночи проживания автоматически падают на второе окно. Соответственно все доп. услуги, с оплатами за них, принимаем на первое.</p>
+        </div>
+    </div>
+</section>
+
+<hr class="page-divider">
+
+<section class="section">
+    <div class="container">
+        <div class="content">
+            <h2>Cash</h2>
+            <p>Чтобы принять оплату наличными средствами: Cashiering → Billing → Ищем нужный номер → Payment → CA (CASH) → В Amount пишем необходимую сумму → Post.</p>
+            <p>Печатаем квитанцию, фискальный чек об оплате крепим к квитанции. Ставим печать “Оплачено”, расписываемся, ставим дату оплаты.</p>
+            <p>Квитанцию с чеками убрать в ячейку или отдать гостю.</p>
+        </div>
+    </div>
+</section>
+
+<hr class="page-divider">
+
+<section class="section">
+    <div class="container">
+        <div class="content">
+            <h2>Оплата по карте</h2>
+            <p>Чтобы принять оплату по карте: Cashiering → Billing → Ищем номер → Payment → CP сумма → Post. Чеки преавторизации выкидываем, 1 чек авторизации - в кассу, 2 чек авторизации вместе с фискальным чеком крепим к квитанции. Ставим печать “Оплачено”, расписываемся, ставим дату оплаты. Квитанцию с чеками убрать в ячейку или отдать гостю.</p>
+        </div>
+    </div>
+</section>
+
+<hr class="page-divider">
+
+<section class="section">
+    <div class="container">
+        <div class="content">
+            <h2>Депозит</h2>
+            <p>Если гость подошел оплачивать номер заранее:</p>
+            <p>Через Arrivals или Update Reservation ищем бронирование → Options → Deposit/CXL → Payment - в зависимости от метода оплаты выбираем CA или CP - Amount пишем сумму → Ok. Печатаем квитанцию, необходимые чеки крепим, ставим печать.</p>
+            <p>После оплаты поменять в брони <b><i>Payment</i></b> на <b><i>CA</i></b>.</p>
+            <p>Квитанцию с чеками об оплате отдать гостю.</p>
+        </div>
+    </div>
+</section>
+
+<hr class="page-divider">
+
+<section class="section">
+    <div class="container">
+        <div class="content">
+            <h2>Квитанция</h2>
+            <p>При принятии оплаты по CA или CP Опера будет предлагать распечатать Receipt. </p>
+            <p>При необходимости, все Receipt можно найти:</p>
+            <p>Cashiering → Cashier Functions → Receipt History → Search → последние сформированные квитанции будут в самом низу списка → Print</p>
+            <p>Ставим прямоугольную печать “ОПЛАЧЕНО”, расписываемся в поле Кассир, ставим дату. К квитанции крепим фискальный авансовый чек.</p>
+        </div>
+    </div>
+</section>
+
+<hr class="page-divider">
+
+<section class="section">
+    <div class="container">
+        <div class="content">
+            <h2>Folio</h2>
+            <p>“Фолио” (финальный счет), формируется после Check Out, но автоматически не печатается. При выселении печатается фискальный чек, его крепим к фолио. Ставим подпись, круглую печать.</p>
+            <ol>
+                <li>Все сделанные фолио можно найти через Cashiering →  Cashier Functions → Folio History → Print;</li>
+                <li>Либо в биллинге открываем нужный номер → Options → Folio History → Print;</li>
+                <li>Счет одной строкой: в биллинге номера заходим в Folio → Folio Style → Person Summary for Groups (Date) (8) → Ok → Print.</li>
+            </ol>
+        </div>
+    </div>
+</section>
+
+<hr class="page-divider">
+
+<section class="section">
+    <div class="container">
+        <div class="content">
+            <h2>Ручной платеж</h2>
+            <p>HRS FiscalService → вкладка “Менеджер” →</p>
+            <img src="../../public/img/payment/payment_1.jpg" height="1080" width="700"/>
+            <p><br>В папке с заездами групп, напротив такой группы будет пометка «пробить чек «зачет аванса» в день выезда.</p>
+            <p>Это значит, что ночной супервайзер должен пробить чек «зачет аванса» вручную на сумму проживания группы в день ее выезда.</p>
+            <p>Сначала сверяем, что сумма на PM совпадает с суммой в счете. Если не совпадает, нужно найти причину. Например, забыли напостить штраф за незаезд или слетел тариф и т.п. Как только нашли причину, производим корректировку.</p>
+            <p>После того как PM окончательно сходится, выселяем его и печатаем фолио.</p>
+            <p>Далее пробиваем чек в HRS FiscalService во вкладке Менеджер.</p>
+            <p>Слово «Проживание» пишем вручную, так же как и сумму. Затем нажимаем «Ручной платеж».</p>
+            <p>Пробитый фискальный чек прикрепляем к фолио. Также, будет заранее прописана инфа, если счет нужно будет отдать. Если такой инфы нет, то кладем счет в папку групп для AR ledger.</p>
+        </div>
+    </div>
+</section>
+
+<!-- TO-DO
+ 1. Терминальные чеки:
+    - Преавторизация - Чек торговой точки;
+    - Расчет - Чек торговой точки;
+    - Расчет - Чек клиента;
+    - Сверка итогов;
+    - Чек возврата.
+2. Фискальные чеки:
+    - Чек прихода;
+    - Чек возврата прихода;
+    - X, Z отчеты.
+3. Чеки мануального терминала - расписать как начислять в биллинге.
+4. Чеки терминала room service - поставить линк на работу в ночную смену, перенести в ночную смену?
+5. Сувенирные чеки:
+    - Кассовый чек;
+    - Терминальный чек;
+    - X, Z отчеты;
+    - Сверки итогов;
+    - Чеки возврата.
+
+    Поставить линк на сувенирную кассу. Перенести в тему сувениров?
+
+6. Электронные чеки: https://ofd.kontur.ru/ - раздел чеки
+
+Добавить фото-примеры всех чеков
+
+Как крепить чеки
+
+Вынести тему чеков отдельно?
+
+Если фискальный чек не печатается - перекинуть оплату на другое окно, дождаться чека и перекинуть обратно
+# BILLING
+
+Про окна
+
+direct bill
+
+package rate
+
+Split Transaction
+
+Transfer Transaction
+
+Settlement → Advance Bill
+
+Кому отдаем/не отдаем счета-->
+
+<div id="footer"></div>
+
+</body>
+</html>
