@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!--suppress HtmlDeprecatedAttribute -->
+<html class="has-navbar-fixed-top" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Routing</title>
+    <link rel="stylesheet" href="../../css/bulma.css">
+    <script src="https://kit.fontawesome.com/afe61cbcdf.js" crossorigin="anonymous"></script>
+    <script defer src="../../scripts/common.js"></script>
+</head>
+<body>
+
+<section class="section">
+    <h1 class="title">Routing</h1>
+</section>
+
+<div id="nav"></div>
+
+<section class="section">
+    <div class="container">
+        <div class="content">
+            <h2>Routing</h2>
+            <p>Рутинг с одного номера на другой номер:</p>
+            <p>В случае, если один номер решил оплатить за несколько номеров:</p>
+            <p>На одном номере принимаем общую оплату за нужное количество номеров, на других номерах, на которых нет оплат, заходим в <b><i>Options → Routing → Route to Room</i></b> пишем номер комнаты, на котором принята общая оплата → <b><i>Transactions</i></b>: <i>BB</i>.</p>
+            <p>В комментариях номера, на котором принята оплата пишем, за какой номер оплатил. Т.к. могут возникнуть неприятные ситуации, связанные с сокращением брони.</p>
+            <article class="message">
+                <div class="message-body">
+                            <span class="icon">
+                                <i class="fa-solid fa-lightbulb"></i>
+                            </span>
+                    <span>Соответственно, на номерах, на которых нет оплат, должен стоять рутинг. На номере, на котором принята оплата, рутинга быть не должно.</span>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<hr class="page-divider">
+
+<section class="section">
+    <div class="container">
+        <div class="content">
+            <h2>Comfort Booking</h2>
+            <p>Если оплаченное бронирование сделано через <b><i>Comfort Booking</i></b> <i>(в подтверждении бронирования, в поле “Способ оплаты” будет указан “Банк. карта: Эквайринг ComfortBooking (Российская банк. карта)”, а в поле “Внесена предоплата” будет указана вся сумма проживания):</i></p>
+            <p>Меняем язык на <b>RU</b>, Ставим в <b><i>Agent</i></b>: <i>Comfort Booking</i>, рутинг не ставим. В <b>Res. Type</b> ставим <b>DR</b>, <b>Payment</b> ставим <b>CA</b>, в <b>комментариях</b> прописываем: <b><i>по выезду закрыть на site payment 9081</i></b>.</p>
+            <img src="../../public/img/routing/routing_1.jpg" height="517" width="774"/>
+        </div>
+    </div>
+</section>
+
+<hr class="page-divider">
+
+<section class="section">
+    <div class="container">
+        <div class="content">
+            <h2>Yandex Travel/Яндекс.Путешествия</h2>
+            <p>Если оплаченная бронь падает с <b><i>Yandex Travel</i></b> <i>(в подтверждении бронирования, в поле “Внесена предоплата” будет указана вся сумма проживания)</i>, то рутинг не ставим. В <b>Agent</b> автоматически будет <b>Yandex Verticali</b>. В <b>Res. Type</b> ставим <b>DR</b>, <b>Payment</b> ставим <b>CA</b>, язык <b>RU</b>, в <b>комментариях</b> прописываем: <b><i>по выезду закрыть на yandex payment 9019.</i></b></p>
+            <img src="../../public/img/routing/routing_2.jpg" height="518" width="772"/>
+            <article class="message">
+                <div class="message-body">
+                            <span class="icon">
+                                <i class="fa-solid fa-lightbulb"></i>
+                            </span>
+                    <span>Если бронь от Яндекс с предоплатой в 1р. то с таким бронированием можно ничего не делать.</span>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<hr class="page-divider">
+
+<section class="section">
+    <div class="container">
+        <div class="content">
+            <h2>Best Eastern Hotel</h2>
+            <p>Если бронирование оплачено с <i>ООО “БЭСТ ИСТЕРН ОТЕЛЬ”,</i> в брони агент будет указан <i>Academ Service</i>, <b><i>меняем его</i></b> на <i>Best Eastern Hotel</i>.</p>
+            <p>Меняем язык на <b><i>RU</i></b>, далее <b><i>Options → Routing → Window →</i></b> стрелку возле <b><i>Name</i></b> → выбираем агента <i>Best Eastern Hotel</i> → <b><i>Transactions</i></b>: <i>BB</i> → <i>Ok</i></p>
+            <p>В брони <b><i>Res. Type</i></b>: <i>TA</i>; <b><i>Payment</i></b>: <i>DB</i></p>
+            <br>
+            <article class="message">
+                <div class="message-body">
+                            <span class="icon">
+                                <i class="fa-solid fa-lightbulb"></i>
+                            </span>
+                    <span>Если, Вы поставили в поле <b><i>Agent</i></b>: <i>Best Eastern Hotel</i>, поставили на него рутинг и приходит коррекция на бронирование, то <b><i>Agent</i></b> автоматически снова изменится на <i>Academ Online</i>. Необходимо будет поменять снова на <i>Best Eastern Hotel</i>.</span>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<hr class="page-divider">
+
+<section class="section">
+    <div class="container">
+        <div class="content">
+            <h2>Ostrovok</h2>
+            <ol>
+                <li>Если в подтверждении бронирования в способе оплаты написано <b>Безналичный расчет (Оплачено на сайте канала)</b> и в самом низу подтверждения будет прописана компания <b>ООО Бронирование гостиниц</b>, то в поле Agent остается Ostrovok. Поставить рутинг на Ostrovok. Res. Type должен быть TA, Payment должен быть DB.</li>
+                <li>Если в подтверждении бронирования в способе оплаты написано <b>Безналичный расчет (Оплачено на сайте канала)</b> и в самом низу подтверждения будет прописана компания <b>ООО Агентика Трэвл</b>, то в поле Agent удаляем Ostrovok и пишем туда Agentika Travel. Поставить рутинг на Agentika Travel. Res. Type должен быть TA, Payment должен быть DB.</li>
+                <li>Если в подтверждении бронирования в способе оплаты написано <b>Банковская карта</b> и <b>ООО Бронирование гостиниц</b>, то рутинг ставить <b><i>не нужно</i></b>. В поле Agent остается Ostrovok. Res. Type должен быть TA, Payment должен быть CA.</li>
+            </ol>
+        </div>
+    </div>
+</section>
+
+<hr class="page-divider">
+
+<section class="section">
+    <div class="container">
+        <div class="content">
+            <h2>X5 retail group и Baltika</h2>
+            <p>Ставим в Agent Aeroclub, ставим рутинг на Aeroclub.</p>
+        </div>
+    </div>
+</section>
+
+<hr class="page-divider">
+
+<section class="section">
+    <div class="container">
+        <div class="content">
+            <h2>Другие каналы</h2>
+            <p>Если бронирование с других каналов <i>(Bronevik, HB-Pro и др.):</i></p>
+            <p>Меняем язык на <b><i>RU</i></b>, в <b><i>Agent</i></b> уже будет выставлен автоматически, <b><i>Option → Routing → Window →</i></b> стрелку возле <b><i>Name →</i></b> выбираем агента, смотрим чтобы был указан <b><i>AR № → Transactions: BB → Ok</i></b></p>
+        </div>
+    </div>
+</section>
+
+<hr class="page-divider">
+
+<section class="section">
+    <div class="container">
+        <div class="content">
+            <h2>Routing на PM</h2>
+            <p>Выбирай тот, у которого есть <b><i>A/R Number</i></b></p>
+        </div>
+    </div>
+</section>
+
+<div id="footer"></div>
+
+</body>
+</html>
