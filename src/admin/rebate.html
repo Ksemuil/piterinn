@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--suppress HtmlDeprecatedAttribute -->
+<html class="has-navbar-fixed-top" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rebate</title>
+    <link rel="stylesheet" href="../../css/bulma.css">
+    <script src="https://kit.fontawesome.com/afe61cbcdf.js" crossorigin="anonymous"></script>
+    <script defer src="../../scripts/common.js"></script>
+</head>
+<body>
+
+<section class="section">
+    <h1 class="title">Rebate</h1>
+</section>
+
+<div id="nav"></div>
+
+<section class="section">
+    <div class="container">
+        <div class="content">
+            <p>Rebate - это случай, когда делается коррекция из-за ошибочного начисления или производственной необходимости.</p>
+            <br>
+            <p>Rebate всегда делается с тем же Market кодом, что и указан в профайле.</p>
+            <p>Если начисление было сделано через Post Rate Code, то и Rebate необходимо делать тоже через Post Rate Code. </p>
+            <br>
+            <p>Если Rebate сделан в этот же день, его можно убрать, изменив его сумму на 0. (как и любые начисления).</p>
+            <br>
+            <p>Code (смотрим какой market code в брони, начисляем им) → в Amount пишем сумму ребейта → Qty ставим -1 (минус один) → Supplement: Rebate, Reference: Rebate → Post</p>
+            <img src="../../public/img/rebate/rebate_1.jpg" height="337" width="800"/>
+            <p>Также для каждого Rebate необходимо заполнить соответствующую форму.</p>
+        </div>
+    </div>
+</section>
+
+<hr class="page-divider">
+
+<section class="section">
+    <div class="container">
+        <div class="content">
+            <p>Заполняем форму <b>REBATE RECEIPT</b> из Z:\FrontOffice\Templates Petrozavodsk\forms</p>
+            <br>
+            <p>Пример заполнения:</p>
+            <img src="../../public/img/rebate/rebate_2.jpg" height="721" width="600"/>
+            <img src="../../public/img/rebate/rebate_3.jpg" height="131" width="600"/>
+            <p>После этого, необходимо распечатать фолио с информацией о ребейте из профайла гостя в опере. Если необходимо, делаем и печатаем скриншот ребейта.</p>
+            <p>Скрепляем бланк с фолио и откладываем на подпись FOM в контейнер REBATES в шкафу.</p>
+        </div>
+    </div>
+</section>
+
+<div id="footer"></div>
+
+</body>
+</html>
