@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!--suppress HtmlDeprecatedAttribute -->
+<html class="has-navbar-fixed-top" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Refund</title>
+    <link rel="stylesheet" href="../../css/bulma.css">
+    <script src="https://kit.fontawesome.com/afe61cbcdf.js" crossorigin="anonymous"></script>
+    <script defer src="../../scripts/common.js"></script>
+</head>
+<body>
+
+<section class="section">
+    <h1 class="title">Refund (возврат)</h1>
+</section>
+
+<div id="nav"></div>
+
+<section class="section">
+    <div class="container">
+        <div class="content">
+            <h2>Возврат наличными:</h2>
+            <p>Payment → Payment Code: CASH → Amount с минусом → Reference: Refund → Post</p>
+            <p>(!) Если в кассе кроме размена нет средств, сначала необходимо сделать <b><i>внесение</i></b> в HRS FiscalService.</p>
+            <p>Вводим необходимую сумму и нажимаем <b><i>“Вложить”</i></b>, вышедший чек оставляем в кассе и сдаем в конверте в конце смены.</p>
+            <img src="../../public/img/refund/refund_1.jpg" height="1080" width="800"/>
+            <p>В этом случае, после возврата, копим средства в кассе, когда наберется необходимая сумма, снова вводим ее и нажимаем <b><i>Изъять</i></b>. Вышедший чек также сохраняем и скидываем в конверт.</p>
+            <p>Если за смену необходимая сумма не накопилась, передаем это по смене.</p>
+        </div>
+    </div>
+</section>
+
+<hr class="page-divider">
+
+<section class="section">
+    <div class="container">
+        <div class="content">
+            <h2>Возврат по безналу:</h2>
+            <article class="message">
+                <div class="message-body">
+                            <span class="icon">
+                                <i class="fa-solid fa-lightbulb"></i>
+                            </span>
+                    <span><b><i>Обязательно по той же карте. Ни в коем случае мы не делаем возврат на другую карту, даже если обе карты принадлежат одному и тому же гостю. Возврат осуществляется только на ту карту, с которой была произведена оплата.</i></b></span>
+                </div>
+            </article>
+            <br>
+            <p>Возврат можно сделать на любой кассе: </p>
+            <p>Payment → Payment Code: CP (Chip and Pin)→ Amount с минусом → Reference: Refund → Post</p>
+            <p>Для возврата по оффлайн терминалу, пароль: 000000 (шесть нулей)</p>
+        </div>
+    </div>
+</section>
+
+<hr class="page-divider">
+
+<section class="section">
+    <div class="container">
+        <div class="content">
+            <h2>Случаи возвратов:</h2>
+            <ol>
+                <li>Возврат по инициативе гостя (выехал раньше, не воспользовался услугой и пр.)</li>
+                <br>
+                <p>Гость заполняет заявление на возврат. Направляю бланк во вложении + печатная форма лежит в папке: Z:\FrontOffice\Templates Petrozavodsk\forms</p>
+                <p>Главное, чтобы гость поставил свою подпись и ФИО. Остальное можете заполнить за гостя вы сами.</p>
+                <p>Также гость <b><i>обязательно</i></b> должен поставить свою подпись <b><i>на чеке возврата</i></b> (в квитанции, которая выходит из оперы) <b><i>и в итоговом фолио.</i></b></p>
+                <li>Возврат по вине сотрудника (перепутали метод оплаты, взяли оплату не на ту сумму и пр.)</li>
+                <br>
+                <p>Сотрудник <b><i>обязательно</i></b> пишет объяснительную, где указывает, почему делает возврат. Объяснительную в свободной форме пишем на имя главного бухгалтера ООО «Питер-Инн» Якимович Л.В.</p>
+            </ol>
+            <p>В каждом случае заполняем акт на возврат, прикрепляем чек продажи и чек возврата. Все скрепляем вместе.</p>
+            <p>Один терминальный чек возврата гостю, другой в кассу.</p>
+            <p>Пример заполнения <b><i>заявления на возврат денежных средств</i></b>, возврат по безналу.</p>
+            <img src="../../public/img/refund/refund_2.jpg" height="873" width="600"/>
+            <p><br>Пример заполнения <b><i>акта о возврате.</i></b></p>
+            <img src="../../public/img/refund/refund_3.jpg" height="1024" width="600"/>
+            <p><br>№ ККМ: 1) FO1: 002317; 2) FO2: 002318.</p>
+            <p>Посмотреть номер можно на фискальном терминале, слева на наклейке.</p>
+        </div>
+    </div>
+</section>
+
+<hr class="page-divider">
+
+<section class="section">
+    <div class="container">
+        <div class="content">
+            <h2>Объяснительная</h2>
+            <p>В объяснительной пишем:</p>
+            <section class="section is-flex is-justify-content-center">
+                <div style="max-width: 600px;">
+                    <p class="has-text-right">главному бухгалтеру<br>ООО «Питер-Инн» Якимович Л. В.<br>от портье Иванова Ивана Ивановича</p>
+                    <p class="has-text-centered"><b>Объяснительная</b></p>
+                    <br>
+                    <p>Был произведен возврат денежных средств на сумму 5000р. из-за неверного метода оплаты.</p>
+                    <div class="is-flex is-justify-content-space-between" style="width: 100%;">
+                        <span>01.01.24</span>
+                        <span>Иванов И. И.</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</section>
+
+<div id="footer"></div>
+
+</body>
+</html>
