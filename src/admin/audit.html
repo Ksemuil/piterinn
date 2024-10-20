@@ -135,7 +135,9 @@
                             <span>Room Assignment → Advanced → Assigned Rooms → Room Type → PM, PI → All → Check In.</span>
                         </div>
                     </article>
-                    Если номер <b><i>PM</i></b> занят, приписываем ему любой свободный и отправляем письмо с изменениями в отдел бронирования, продаж, ресторан, supervisor supervisor <i>(шаблон есть на почте)</i>.</li>
+                    Если номер <b><i>PM</i></b> занят, приписываем ему любой свободный и отправляем письмо с изменениями в отдел бронирования, продаж, ресторан, supervisor supervisor <i>(шаблон есть на почте)</i>.
+                </li>
+                <li>Выселить номера <b><i>"После н/а"</i></b> из хэндовера</li>
                 <li>Сохраняем отчёт <b><i>Manager Flash</i></b> в 2 папки:
                     <ul>
                         <li><i>FO — Night Audit</i> (пересохранить вчерашнее)</li>
@@ -289,6 +291,86 @@
     <div class="container">
         <div class="content">
             <h2>Hotel Advisor</h2>
+            <ol>
+                <li>Берём в наши цепкие руки 2 отчёта: <b><i>*Market Code Statistics</i></b> и <b><i>Manager Flash</i></b></li>
+                <li>Открываем сайт <a href="https://analytics.hoteladvisors.ru/"><b>Hotel Advisor</b></a><br><b>Прим. разработчика: логин и пароль здесь публиковаться не будут, ищите в почте :)</b></li>
+                <li>После входа нажимаем на <i>иконку с карандашом → "Аналитика рынка"</i>
+                    <div class="spoiler">
+                        <button class="button is-text spoiler-toggle">
+                            Скриншотик
+                        </button>
+                        <div class="spoiler-content" style="display: none">
+                            <img src="../../public/img/audit/audit_1.png" height="221" width="893"/>
+                        </div>
+                    </div>
+                </li>
+                <li>Нажимаем на кнопочку <i>"Новый"</i>
+                    <div class="spoiler">
+                        <button class="button is-text spoiler-toggle">
+                            Скриншотик
+                        </button>
+                        <div class="spoiler-content" style="display: none">
+                            <img src="../../public/img/audit/audit_2.png" height="356" width="767"/>
+                        </div>
+                    </div>
+                </li>
+                <li>Заполняем обе вкладки: <i>"Общее"</i> и <i>"Группы"</i>
+                    <ul>
+                        <li>Вкладка <i>"Общее"</i> заполняется по отчёту <b><i>Manager Flash</i></b>:
+                            <ol>
+                                <li>Строки <i>"Кол-во номеров"</i> и <i>"Номера на ремонте"</i> <b>заполнению не подлежат</b></li>
+                                <li><i>"Выручка за номера"</i> заполняется из строки <b><i>"Room Revenue"</i></b></li>
+                                <li><i>"Кол-во заездов"</i> берётся из <b><i>"Arrival Rooms"</i></b></li>
+                                <li><i>"Проданные номера"</i> соответствуют строке <b><i>"Rooms Occupied"</i></b></li>
+                                <li>Раздел <i>"Бесплатные номера"</i> заполняется согласно <b><i>"Complimentary Rooms"</i></b></li>
+                                <li><i>"Выручка отеля"</i> — это <b><i>"Total Revenue"</i></b></li>
+                                <li><i>"Кол-во гостей"</i> берём из строки <b><i>"Total In-House Persons"</i></b></li>
+                            </ol>
+                        </li>
+                        <li>Вкладка <i>"Группы"</i> заполняется по отчёту <b><i>*Market Code Statistics:</i></b>
+                            <ol>
+                                <li>А тут мы просто берём значения из верхнего раздела (см. скриншот)
+                                    <div class="spoiler">
+                                        <button class="button is-text spoiler-toggle">
+                                            Скриншотик
+                                        </button>
+                                        <div class="spoiler-content" style="display: none">
+                                            <img src="../../public/img/audit/audit_3.png" height="276" width="860"/>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ol>
+                        </li>
+                    </ul>
+                </li>
+                <li>После того как всё заполнили, жмём <i>"Сохранить&Закрыть"</i></li>
+                <li>Готово! Вы восхитительны!</li>
+            </ol>
+        </div>
+    </div>
+</section>
+
+<hr class="page-divider">
+
+<section class="section">
+    <div class="container">
+        <div class="content">
+            <h2>Проверка выезда</h2>
+            <ul>
+                <li>Проверяем комментарии у номеров на <b><i>Due Out</i></b>, выписываем поздние выезды</li>
+                <li>Выселяем и заселяем обратно номера с <b><i>рутингами</i></b></li>
+                <li>Закрываем номера на <b><i>Yandex Payment</i></b> и <b><i>Site Payment</i></b></li>
+                <li>Сверяем <b><i>PM групп</i></b> с заявками из папки с группами. Если сходится - выселяем</li>
+            </ul>
+            <h2>Проверка заезда</h2>
+            <p>Проверяем комментарии на предмет необходимости <b><i>установки доп. места</i></b> или <b><i>раскладывания дивана</i></b> в JKN/1KN, также выписываем гостей с пометкой <b><i>Member</i></b> и другие особые пожелания.</p>
+            <h2>Печать отчётов</h2>
+            <p><b><i>Arrivals: Detailed</i></b> для охраны — в 5:00</p>
+            <p><b><i>Guest In-House - Room Order</i></b> для ресторана (вычеркнуть ланчики и тарифы без завтрака + дописать ранние заезды).</p>
+            <h2>Отправка писем</h2>
+            <p>Поэтажной службе: результаты проверки заезда-выезда, детские группы на выезде-заезде (списки делаем через Group Rooming List), всё важное для HSKP из handover, No Show, отмены, кто заехал ночью и без брони, что относили в номера.</p>
+            <p>Второе - все в папке Night Audit, кроме prenight reports.</p>
+            <p>Все шаблоны писем есть в почте.</p>
         </div>
     </div>
 </section>
