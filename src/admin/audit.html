@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<!--suppress HtmlDeprecatedAttribute -->
+<html class="has-navbar-fixed-top" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ночной аудит</title>
+    <link rel="stylesheet" href="../../css/bulma.css">
+    <script src="https://kit.fontawesome.com/afe61cbcdf.js" crossorigin="anonymous"></script>
+    <script defer src="../../scripts/common.js"></script>
+</head>
+<body>
+
+<section class="section">
+    <h1 class="title">Ночной аудит</h1>
+</section>
+
+<div id="nav"></div>
+
+<section class="section">
+    <div class="container">
+        <div class="content">
+            <h2>До закрытия ресторана</h2>
+            <ol>
+                <li>Печатаем чеклист ночного аудита.</li>
+                <li>Проверить кол-во готовых номеров (F3). Выставить квоту на текущую дату в <b><i>TravelLine</i></b>. <i>(Доступно в АСУ - In House Quota = Продается онлайн)</i>.</li>
+                <li>Продлить/аддонить <b><i>PM</i></b> и <b><i>PI</i></b>. <i>(In House Guest → Advanced → Due Out)</i>. Всего 13 PM, PI, которые мы аддоним: 9004, 9500, 9600, 9601, 9602, 9604, 9605, 9606, 9607, 9608, 9609, 9610, 9611, 9700 <i>(Options → Addon → OK → +1 к дате заезда, 0 ночей, номер приписываем из названия → Save)</i>, остальное не аддоним, а продлеваем на +1 ночь.
+                    <article class="message">
+                        <div class="message-body">
+                            <span>Если аудит проходит в ночь на новый месяц <b><i>с 30 на 01</i></b> или <b><i>с 31 на 01</i></b>, то нужно сделать аддоны еще <b><i>4 PM</i></b>, только не на 0 ночей, как остальные PM, а <b><i>на весь месяц с 01 по 30 или с 01 по 31</i></b>:
+                                <ol>
+                                    <li>9015 (Gift vouchers)</li>
+                                    <li>9018 (Car Parking)</li>
+                                    <li>9023 (Coffee Shop Vouchers)</li>
+                                    <li>9027 (Photo sessions)</li>
+                                </ol>
+                            </span>
+                        </div>
+                    </article>
+                </li>
+                <li><b><i>После</i></b> заезда всех гостей: сохранить отчеты из <b><i>Miscellaneous → Reports</i></b> в папку Z:\FrontOffice\night audit\<span class="has-background-warning-20 has-text-white"><b>Prenight Reports</b></span>:
+                    <ul>
+                        <li><span class="has-background-warning-20 has-text-white">Arrivals: Detailed (два вида – сначала сохраняешь all, потом ставишь галочку VIP и
+                            сохраняешь его);</span></li>
+                        <li><span class="has-background-warning-20 has-text-white">Guest In House - Room Order;</span></li>
+                        <li><span class="has-background-warning-20 has-text-white">Guest In House - Alpha Order;</span></li>
+                        <li><span class="has-background-warning-20 has-text-white">Open Balance All.</span></li>
+                    </ul>
+                </li>
+                <li>Отчет <b><i>Rate Variance (rate check):</i></b> проверяем на наличие шеров, правильно ли сделаны шеры, также у нулевых шеров должен быть нулевой <b><i>Rate Amt.</i></b> Если шеры 1/1, то суммы должны быть одинаковые.</li>
+                <li>Прикрепляем профайлы к бронированиям на следующий день.</li>
+                <li>Проверить, кто продлился <i>(Shift+F3→ Extended Stays)</i>. Продленных гостей проверить в контуре на наличие продления. Проверить, поменяли ли дату выезда в регистрационной карте гостя.</li>
+                <li>Проверить, заказаны ли ланчбоксы.</li>
+                <li>Ждем звонка от супервайзера ресторана (примерно к 01:10), должны сообщить, что они закрыли кассы.</li>
+            </ol>
+        </div>
+    </div>
+</section>
+
+<hr class="page-divider">
+
+<section class="section">
+    <div class="container">
+        <div class="content">
+            <h2>После закрытия ресторана</h2>
+            <ol>
+                <li>Проверить на выезде <b><i>PM</i></b> и <b><i>PI</i></b> в <i>Billing</i> на отсутствие незакрытых сумм (везде должно быть по нулям, если нет - начислить необходимое), затем выселить через кнопку <b><i>Cashiering → Quick Check Out → C/O Zero.</i></b></li>
+                <li>Закрыть кассы. Снять сверки итогов на всех терминалах. Проверить, закрыты ли кассы можно через <b><i>Контур.ОФД → Кассы</i></b>, либо вручную.
+                    <article class="message">
+                        <div class="message-body">
+                            <span class="icon">
+                                <i class="fa-solid fa-gear"></i>
+                            </span>
+                            <span>Снятие сверок:
+                                <ul>
+                                    <li>Терминалы у ПК: HRSCCAClient → Close Day</li>
+                                    <li>Сувенирная касса: Служебные операции — Сверка итогов</li>
+                                    <li>Мануальник: Служебные операции — Сверка итогов.</li>
+                                </ul>
+                            </span>
+                        </div>
+                    </article>
+                </li>
+                <li>Убедиться, что портье сделал выезд и <b><i>A/R Ledger.</i></b></li>
+                <li>Проверить заезд.<br> Если на заезде остались номера:
+                    <ul>
+                        <li><b><i>Негарантированные</i></b> брони (<b><i>NG, CO</i></b> <i>с оплатой в отеле</i>) отменяем.</li>
+                        <li>Гарантированные (DB, CC, DR) оставляем. Они уйдут в <b><i>No Show</i></b>. </li>
+                        <li>Номера, которые на несколько ночей - закрыть на TL, после восстановления из No show - открыть.</li>
+                        <li>Прописать у каждой не заехавшей брони суммы оплаты и информацию по брони.</li>
+                    </ul>
+                </li>
+                <li><span class="has-background-warning-20 has-text-white">Сохранить <b><i>Downtime Reports</i></b> на диск F</span>.
+                    <article class="message">
+                        <div class="message-body">
+                            <span class="icon">
+                                <i class="fa-solid fa-gear"></i>
+                            </span>
+                            <span>Reports → Downtime Reports</span>
+                        </div>
+                    </article>
+                    Перед этим удалить старые документы с диска. Если окно отчета не прогрузилось — обнови страницу. Всего должно быть 9 отчётов.</li>
+                <li>Закрыть Micros.<br>На компьютере отдельная программа Micros (также может называться Autosequence and Reports) → ввести свои данные → пароль <span class="has-background-warning-20 has-text-white"><b>7969902</b></span> → Закрыть день. Дождаться слова <b><i>Done</i></b>.<br>Если будет <b><i>did not complete</i></b>, зайти посмотреть перевелась ли дата <i>(report - time period).</i> Если да, то все ок. Также сообщить об этом утром в ресторан.</li>
+                <li>Еще раз проверить выезд и заезд, запустить аудит.
+                    <article class="message">
+                        <div class="message-body">
+                            <span class="icon">
+                                <i class="fa-solid fa-gear"></i>
+                            </span>
+                            <span>End of day → Night Audit → Start → No → Ok.</span>
+                        </div>
+                    </article>
+                </li>
+                <li>Проверить закрытие сувениров и пополнить сувениры.</li>
+            </ol>
+        </div>
+    </div>
+</section>
+
+<hr class="page-divider">
+
+<section class="section">
+    <div class="container">
+        <div class="content">
+            <h2>После аудита</h2>
+            <ol>
+                <li>Сохранить скрин House Status <i>(Shift+F3)</i> в папку <span class="has-background-warning-20 has-text-white"><b><i>Z:\FrontOffice\night audit</i></b></span>.</li>
+                <li>Заселить <b><i>PM</i></b> и <b><i>PI</i></b>.
+                    <article class="message">
+                        <div class="message-body">
+                            <span class="icon">
+                                <i class="fa-solid fa-gear"></i>
+                            </span>
+                            <span>Room Assignment → Advanced → Assigned Rooms → Room Type → PM, PI → All → Check In.</span>
+                        </div>
+                    </article>
+                    Если номер <b><i>PM</i></b> занят, приписываем ему любой свободный и отправляем письмо с изменениями в отдел бронирования, продаж, ресторан, supervisor supervisor <i>(шаблон есть на почте)</i>.</li>
+                <li>Сохраняем отчёт <b><i>Manager Flash</i></b> в 2 папки:
+                    <ul>
+                        <li><i>FO — Night Audit</i> (пересохранить вчерашнее)</li>
+                        <li><i>Z: — DRR — Manager Flash</i></li>
+                    </ul>
+                    Также не забываем записать время проведения аудита в чек-лист.
+                </li>
+                <li><span class="has-background-info-20 has-text-white">Печатаем No show</span>, его нужно подписать и убрать в папку.</li>
+                <li>Работаем с отчетом <b><i>Journal by Cashier and Transaction Code</i></b>:
+                    <ul>
+                        <li>Меняем даты на <b><i>-1, в trans.code</i></b> пишем <b><i>1025</i></b> и нажимаем Preview. Смотрим сумму апселлов. Записываем сумму в таблицу <b><i>Upsell Statistics 2023</i></b> на <i>Z:\FrontOffice\UPSELL\2023</i>.</li>
+                        <li>Меняем даты на -<b><i>1</i></b>, у графы <b><i>Cashier</i></b> нажимаем стрелку, нажимаем кнопку <b><i>all</i></b> и затем <b><i>ok</i></b>. Поставить галочку у <b><i>Negative Postings Only</i></b>. Затем <b><i>Preview</i></b>. Листаем в конец отчета. Проверяем возвраты и ребейты, сделанные нашими сотрудниками. Проверить правильность заполнения форм и заявлений.</li>
+                        <li>Меняем даты на <b><i>-1,</i></b> поставить галочки у <b><i>Negative Post.Only</i></b> и <b><i>Revenue - Net</i></b>. Затем <b><i>Preview</i></b>.<span class="has-background-warning-20 has-text-white">Сохраняем отчет на Z:\Finance\Opera Reports → нужный год и месяц</span>.</li>
+                        <li>Меняем даты на <b><i>-1,</i></b> в <b><i>trans.code</i></b> пишем <b><i>9019</i></b> и нажимаем <b><i>Preview</i></b>, <span class="has-background-warning-20 has-text-white">сохраняем отчет на Z:\Finance\Opera Reports под названием <b><i>Yandex payment день и месяц</i></b>.</span></li>
+                        <li>Меняем даты на <b><i>-1</i></b>, в <b><i>trans.code</i></b> пишем <b><i>9081</i></b> и нажимаем <b><i>Preview</i></b>, <span class="has-background-warning-20 has-text-white">сохраняем отчет на Z:\Finance\Opera Reports под названием <b><i>Site payment день и месяц</i></b>.</span></li>
+                    </ul>
+                </li>
+            </ol>
+            <br>
+            <p>Продолжаем работать с папкой <span class="has-background-warning-20 has-text-white"><i>Z:\Finance\<b>Opera Reports</b></i></span>. Сохраняем отчеты:</p>
+            <ol>
+                <li><b><i>Credit Limit Report</i></b>
+                    <ul>
+                        <li>Pay Method — All — Снять DB</li>
+                    </ul>
+                </li>
+                <li><b><i>Financial Payments and Revenue</i></b>
+                    <ul>
+                        <li>Печатаем <b><i>Revenue</i></b></li>
+                        <li>Сохраняем <b><i>All</i></b></li>
+                    </ul>
+                </li>
+                <li><b><i>Guest Birthday</i></b> — сохраняем</li>
+                <li><b><i>Guest INH - PM account by Name</i></b> — сохраняем</li>
+                <li><b><i>Guest Ledger Detail</i></b> — сохраняем.</li>
+                <li><b><i>*Market code statistics</i></b> — <span class="has-background-info-20 has-text-white">печатаем</span> и сохраняем.</li>
+                <li><b><i>Reservation Statistics 1</i></b> — <span class="has-background-info-20 has-text-white">печатаем</span>.</li>
+                <li><b><i>Trial Balance</i></b> — сохраняем, <span class="has-background-info-20 has-text-white">печатаем только 1 страницу</span>.</li>
+                <li><b><i>History and Forecast:</i></b>
+                    <ul>
+                        <li>Сохранить в папку без изменения дат, снять галочку у <b><i>Non deduct</i></b></li>
+                        <li>Меняем дату с сегодняшнего дня и на следующий месяц, снять галочку <b><i>Non Deduct</i></b>, <span class="has-background-info-20 has-text-white">распечатать</span>, сохранить в <span class="has-background-warning-20 has-text-white"><i>FO — Night Audit</i></span></li>
+                    </ul>
+                </li>
+            </ol>
+            <br>
+            <p>Работаем с папкой <span class="has-background-warning-20 has-text-white"><i>Z:\FrontOffice\<b>night audit</b></i></span></p>
+            <ol>
+                <li><b><i>Arrivals: Detailed</i></b> (два вида – <b>all</b> и <b>vip</b>)</li>
+                <li><b><i>Guest In House - Room order</i></b>.</li>
+                <li><b><i>Daily/Weekly listing of events (detailed)</i></b>
+                    <ol>
+                        <li>Ставим текущую дату</li>
+                        <li><b><i>Event Status</i></b>: <i>Act,Def,Ten</i></li>
+                        <li>Сохранить и <span class="has-background-info-20 has-text-white">распечатать</span>. Оставить на стойке.</li>
+                        <li><span class="has-background-warning-20 has-text-white"><i>Z: — Reservation sales — M&E — Function — тек. год и месяц — *.xlsx — тек. день</i></span> — <span class="has-background-info-20 has-text-white">распечатать</span>, оставить на стойке.</li>
+                    </ol>
+                </li>
+                <li><b><i>Reservation Repeat Guest</i></b>. Поставить текущую дату.</li>
+                <li><b><i>Room maintenance — Not resolved</i></b>.</li>
+            </ol>
+        </div>
+    </div>
+</section>
+
+<hr class="page-divider">
+
+<section class="section">
+    <div class="container">
+        <div class="content">
+            <h2>Заполнение DRR</h2>
+            <ol>
+                <li>Открываем папку <span class="has-background-warning-20 has-text-white"><i>Z:\DRR — год — месяц</i></span></li>
+                <li>Создаем копию последнего файла со вчерашней датой</li>
+                <li><span class="has-background-text-30 has-text-white"><b>Buttons</b></span>
+                    <ul>
+                        <li>Меняем дату на вчерашнюю</li>
+                    </ul>
+                </li>
+                <li><span class="has-background-text-30 has-text-white"><b>14 Day Fcst</b></span>
+                    <ol>
+                        <li>Берём отчёт <b><i>History and Forecast</i></b>, отмеряем по нужный день</li>
+                        <li>Заполняем графы <span class="has-background-text-30 has-text-white"><b>Guest (Adults and Children)</b></span> и <span class="has-background-text-30 has-text-white"><b>Rooms (Total Occupied)</b></span></li>
+                    </ol>
+                </li>
+                <li><span class="has-background-text-30 has-text-white"><b>Opera</b></span>
+                    <ol>
+                        <li>Берём отчёт <b><i>Revenue By Transaction</i></b></li>
+                        <li>Заполняем <span class="has-background-text-30 has-text-white"><b>2.1 Restaurant Paulaner</b></span>
+                            <ol>
+                                <li>Складываем <b><i>Lunch Food</i></b> + <b><i>Dinner Food</i></b> — заносим в
+                                    <span class="has-background-text-30 has-text-white"><b>Food</b></span></li>
+                                <li>Складываем <b><i>Beverage A.</i></b> — заносим в <span class="has-background-text-30 has-text-white"><b>Beverage A.</b></span></li>
+                                <li>Складываем <b><i>Beverage NA</i></b>. — заносим в <span class="has-background-text-30 has-text-white"><b>Beverage NA.</b></span></li>
+                                <li>Складываем <b><i>Paulaner Lunch Misc. + Paulaner Dinner Misc</i></b>. — заполняем
+                                    <span class="has-background-text-30 has-text-white"><b>Paulaner Misc</b></span>.</li>
+                                <li>Сверяем с <span class="has-background-text-30 has-text-white"><b>Subgroup Total</b></span> и верхней графой
+                                    <span class="has-background-text-30 has-text-white"><b>2.1</b></span></li>
+                            </ol>
+                        </li>
+                        <li>Заполняем <span class="has-background-text-30 has-text-white"><b>2.2 Coffee Shop</b></span> аналогично</li>
+                        <li>Заполняем <span class="has-background-text-30 has-text-white"><b>2.3 Room Service</b></span> аналогично</li>
+                        <li>Заполняем <span class="has-background-text-30 has-text-white"><b>2.4 Restaurant Paulaner 2</b></span> аналогично</li>
+                        <li>Заполняем <span class="has-background-text-30 has-text-white"><b>2.5 Conference & Banquet</b></span> аналогично</li>
+                        <li>Проверяем на наличие других сумм в <span class="has-background-text-30 has-text-white"><b>Other Revenue</b></span></li>
+                        <li>Возвращаемся к <span class="has-background-text-30 has-text-white"><b>2.1 Restaurant Paulaner</b></span>
+                            <ol>
+                                <li>Заполняем <span class="has-background-text-30 has-text-white"><b>Breakfast 450 & 495</b></span></li>
+                                <li>Заполняем <span class="has-background-text-30 has-text-white"><b>Dinner Package</b></span></li>
+                            </ol>
+                        </li>
+                        <li>Заполняем <span class="has-background-text-30 has-text-white">1. <b>Rooms Revenue</b></span> и Occupied Rooms согласно Market Code Statistics</li>
+                        <li>Заполняем фиолетовые ячейки по отчёту <b><i>Journal By Cashier And Transaction Code</i></b>, который распечатали ранее. <u>Их может и не быть</u>.</li>
+                    </ol>
+                </li>
+            </ol>
+        </div>
+    </div>
+</section>
+
+<hr class="page-divider">
+
+<section class="section">
+    <div class="container">
+        <div class="content">
+            <h2>Room Revenue</h2>
+            <p>Сверить отчёты <b><i>Reservation Statistics 1</i></b> (только <b><i>Room Rev</i></b>.) и <b><i>Trial Balance</i></b>.</p>
+            <p><b><i>RAC = Retail + Accomodation Up-Sell</i></b></p>
+            <p>Расхождения обвести в <b><i>Reservation Statistics 1</i></b> и сверху надписать какая сумма должна быть.</p>
+            <p>После проверки - положить <b><i>RSDP</i></b> на стол.</p>
+        </div>
+    </div>
+</section>
+
+<hr class="page-divider">
+
+<section class="section">
+    <div class="container">
+        <div class="content">
+            <h2>Credit Limit Report</h2>
+            <p>Открываем отчет в <i>End of day → Reports → Credit Limit</i>. Проверяем начисления, смотрим на графы <b><i>Balance</i></b> и <b><i>Variance Exc.</i></b></p>
+            <p>Все, что <b><i>CA</i></b> - проверяем вручную. Заходим в каждую бронь, смотрим, все ли начислено корректно.</p>
+            <p>Все, что <b><i>DB</i></b> должно быть либо по нулям, либо одинаковым, если нет - заходим в бронь, смотрим.</p>
+        </div>
+    </div>
+</section>
+
+<hr class="page-divider">
+
+<section class="section">
+    <div class="container">
+        <div class="content">
+            <h2>Hotel Advisor</h2>
+        </div>
+    </div>
+</section>
+
+<div id="footer"></div>
+
+</body>
+</html>
