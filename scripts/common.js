@@ -18,7 +18,6 @@ const navbarHTML = `
     
     <div id="navbarMain" class="navbar-menu">
         <div class="navbar-start">
-            </a>
             <a class="navbar-item is-tab" href="/piterinn/src/admin.html">
                 Администратор
             </a>
@@ -32,6 +31,11 @@ const navbarHTML = `
                 Memes!
             </a>
         </div>
+    </div>
+    <div class="navbar-end">
+        <a class="navbar-item is-tab" href="/piterinn/src/changelog.html">
+            Список изменений
+        </a>
     </div>
 </nav>`;
 
