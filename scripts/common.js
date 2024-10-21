@@ -1,5 +1,5 @@
 const navbarHTML = `
-    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+    <nav class="navbar is-fixed-top has-shadow" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
         <a class="navbar-item" href="/piterinn/index.html">
             <figure class="image">
@@ -7,15 +7,14 @@ const navbarHTML = `
             </figure>
             
         </a>
-                        
         <a class="navbar-burger" role="button" aria-label="menu" aria-expanded="false" data-target="navbarMain">
+          <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
         </a>
     </div>
-    
     <div id="navbarMain" class="navbar-menu">
         <div class="navbar-start">
             <a class="navbar-item is-tab" href="/piterinn/src/admin.html">
@@ -31,11 +30,11 @@ const navbarHTML = `
                 Memes!
             </a>
         </div>
-    </div>
-    <div class="navbar-end">
-        <a class="navbar-item is-tab" href="/piterinn/src/changelog.html">
-            Список изменений
-        </a>
+        <div id="navbarEnd" class="navbar-end">
+            <a class="navbar-item is-tab" href="/piterinn/src/changelog.html">
+                Список изменений
+            </a>
+        </div>
     </div>
 </nav>`;
 
@@ -121,3 +120,46 @@ const footerHTML = `
 </footer>`;
 
 document.getElementById('footer').innerHTML = footerHTML;
+
+// Добавляем кнопку "Вверх"
+const backToTopButton = document.createElement('button');
+backToTopButton.id = 'backToTop';
+backToTopButton.className = 'button is-link-50';
+backToTopButton.title = 'Go to top';
+backToTopButton.innerText = '↑ Вверх';
+document.body.appendChild(backToTopButton);
+
+// Стилизация кнопки "Вверх"
+const style = document.createElement('style');
+style.innerHTML = `
+    #backToTop {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        display: none;
+        z-index: 1000;
+        padding: 10px;
+        font-size: 18px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    #backToTop:hover {
+        background-color: #4258ff;
+    }
+`;
+document.head.appendChild(style);
+
+// Показываем/скрываем кнопку "Вверх" при прокрутке
+window.onscroll = function() {
+    const backToTopButton = document.getElementById("backToTop");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        backToTopButton.style.display = "block";
+    } else {
+        backToTopButton.style.display = "none";
+    }
+};
+
+// Прокрутка вверх при нажатии на кнопку
+document.getElementById("backToTop").addEventListener("click", function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
